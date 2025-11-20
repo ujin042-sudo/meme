@@ -1,5 +1,9 @@
 {
+
   "name": "meme",
+  "homepage": "https://ujin042-sudo.github.io/meme", 
+  "name": "meme",
+  
   "version": "0.1.0",
   "private": true,
   "dependencies": {
