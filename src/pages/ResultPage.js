@@ -76,19 +76,6 @@ const ResultPage = () => {
             </div>
           </div>
 
-          <div className="result-stats">
-            <div className="stat-item">
-              <span className="stat-emoji">🎯</span>
-              <span className="stat-text">정답률: {(score / 10 * 100).toFixed(0)}%</span>
-            </div>
-            <div className="stat-item">
-              <span className="stat-emoji">⭐</span>
-              <span className="stat-text">
-                {score <= 3 ? '과포화형' : score <= 6 ? '초보형' : score <= 8 ? '중상위형' : '고인물형'}
-              </span>
-            </div>
-          </div>
-
           <ShareButton grade={result.grade} score={score} />
 
           <button className="retry-button" onClick={handleRetry}>
