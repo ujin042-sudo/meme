@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>버튼 만들기 실습</title> 
+
+    <style>
+        .button-container {
+            display: flex;
+            gap: 25px;
+            padding: 50px;
+        }
+
+        /* 모든 버튼의 공통 스타일 */
+        .btn {
+            text-decoration: none; 
+            font-weight: bold;
+            font-size: 1.2rem;
+            padding: 12px 35px;
+            border-radius: 50px; 
+            border: 6px solid white;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        /* 개별 버튼 색상 */
+        .btn-naver {
+            background-color: #9be08a;
+            color: white; /* 글자색: 흰색 */
+        }
+
+        .btn-google {
+            background-color: #7abcfb;
+            color: white; /* 글자색: 흰색 */
+        }
+
+        .btn-daum {
+            background-color: #f4e37f;
+            color: black; /* 글자색: 검은색 */
+        }
+
+    </style>
+</head>
+
+<body>
+    
+    <div class="button-container">
+        <a href="#" class="btn btn-naver">네이버</a>
+        <a href="#" class="btn btn-google">구글</a>
+        <a href="#" class="btn btn-daum">다음</a>
+    </div>
+
+</body>
+</html>

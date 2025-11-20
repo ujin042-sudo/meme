@@ -1,24 +1,29 @@
-import logo from './logo.svg';
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import StartPage from './pages/StartPage';
+import QuizPage from './pages/QuizPage';
+import ResultPage from './pages/ResultPage';
+import AdminPage from './pages/AdminPage';
+import { initGA } from './utils/analytics';
 import './App.css';
 
 function App() {
+  useEffect(() => {
+    // GA4 초기화
+    initGA();
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<StartPage />} />
+          <Route path="/quiz" element={<QuizPage />} />
+          <Route path="/result" element={<ResultPage />} />
+          <Route path="/admin" element={<AdminPage />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

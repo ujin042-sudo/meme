@@ -1,0 +1,379 @@
+.result-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.result-container {
+  max-width: 700px;
+  width: 100%;
+  background: white;
+  border-radius: 30px;
+  padding: 50px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 1;
+  animation: slideUp 0.6s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.result-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.result-emoji {
+  font-size: 120px;
+  margin-bottom: 20px;
+  animation: bounce-in 1s ease-out;
+}
+
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.result-grade {
+  font-size: 48px;
+  font-weight: 900;
+  color: #333;
+  margin: 0 0 10px 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.result-subtitle {
+  font-size: 24px;
+  font-weight: 700;
+  color: #666;
+  margin: 0;
+}
+
+.result-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.score-display {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+}
+
+.score-label {
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  opacity: 0.9;
+}
+
+.score-value {
+  display: block;
+  font-size: 56px;
+  font-weight: 900;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.result-info {
+  text-align: center;
+}
+
+.result-description {
+  font-size: 18px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  padding: 0 20px;
+}
+
+/* 특징 분석 & 솔루션 섹션 */
+.analysis-section,
+.solution-section {
+  background: #f8f9fa;
+  border-radius: 15px;
+  padding: 25px;
+  margin: 20px 0;
+  text-align: left;
+}
+
+.section-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: #333;
+  margin: 0 0 20px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.section-emoji {
+  font-size: 28px;
+}
+
+.characteristics-list,
+.solutions-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.characteristic-item {
+  display: flex;
+  align-items: start;
+  gap: 12px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #495057;
+  padding: 12px;
+  background: white;
+  border-radius: 10px;
+  border-left: 4px solid #667eea;
+}
+
+.bullet {
+  color: #667eea;
+  font-size: 20px;
+  font-weight: 900;
+  flex-shrink: 0;
+  margin-top: -2px;
+}
+
+.solution-item {
+  display: flex;
+  align-items: start;
+  gap: 12px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #495057;
+  padding: 12px;
+  background: white;
+  border-radius: 10px;
+  border-left: 4px solid #4ECDC4;
+}
+
+.solution-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 28px;
+  height: 28px;
+  background: linear-gradient(135deg, #4ECDC4 0%, #44A08D 100%);
+  color: white;
+  font-size: 14px;
+  font-weight: 900;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.result-title {
+  font-size: 32px;
+  font-weight: 800;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.result-recommendation {
+  background: #f8f9fa;
+  border-left: 4px solid #667eea;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+  display: flex;
+  align-items: start;
+  gap: 15px;
+  text-align: left;
+}
+
+.recommendation-emoji {
+  font-size: 32px;
+  flex-shrink: 0;
+}
+
+.result-recommendation p {
+  font-size: 16px;
+  color: #333;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.result-stats {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.stat-item {
+  background: linear-gradient(135deg, #F093FB 0%, #F5576C 100%);
+  color: white;
+  border-radius: 15px;
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(245, 87, 108, 0.3);
+}
+
+.stat-emoji {
+  font-size: 24px;
+}
+
+.retry-button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 20px 40px;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 30px auto 0;
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+}
+
+.retry-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(102, 126, 234, 0.6);
+}
+
+.retry-button:active {
+  transform: translateY(-1px);
+}
+
+.button-emoji {
+  font-size: 24px;
+  animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.result-footer {
+  text-align: center;
+  margin-top: 30px;
+  color: #666;
+}
+
+.result-footer p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.made-with {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+/* Confetti animation */
+.confetti-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.confetti {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: -10px;
+  animation: fall 4s linear infinite;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh) rotate(360deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .result-container {
+    padding: 30px 20px;
+  }
+  
+  .result-emoji {
+    font-size: 80px;
+  }
+  
+  .result-grade {
+    font-size: 36px;
+  }
+
+  .result-subtitle {
+    font-size: 18px;
+  }
+  
+  .score-value {
+    font-size: 42px;
+  }
+  
+  .result-description {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+
+  .section-title {
+    font-size: 20px;
+  }
+
+  .analysis-section,
+  .solution-section {
+    padding: 20px;
+  }
+
+  .characteristic-item,
+  .solution-item {
+    font-size: 14px;
+    padding: 10px;
+  }
+  
+  .result-stats {
+    flex-direction: column;
+  }
+  
+  .retry-button {
+    font-size: 18px;
+    padding: 16px 32px;
+  }
+}

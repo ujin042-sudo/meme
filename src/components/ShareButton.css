@@ -1,0 +1,90 @@
+.share-container {
+  margin-top: 40px;
+  width: 100%;
+}
+
+.share-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.share-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.share-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px 20px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: white;
+  flex-direction: column;
+}
+
+.share-icon {
+  font-size: 32px;
+}
+
+.share-btn.native {
+  background: linear-gradient(135deg, #00d2ff, #3a7bd5);
+}
+
+.share-btn.copy {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.share-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.share-btn:active {
+  transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+  .share-buttons {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  
+  .share-btn {
+    padding: 14px 10px;
+    font-size: 13px;
+  }
+  
+  .share-icon {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .share-buttons {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  
+  .share-btn {
+    flex-direction: row;
+    padding: 16px 20px;
+    font-size: 16px;
+  }
+  
+  .share-icon {
+    font-size: 24px;
+  }
+}
