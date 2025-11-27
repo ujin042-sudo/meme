@@ -16,7 +16,9 @@ const shuffleArray = (array) => {
 // 랜덤으로 N개 선택 후 섞기
 const getRandomQuestions = (allQuestions, count = 10) => {
   const shuffled = shuffleArray(allQuestions);
-  return shuffled.slice(0, count);
+  // count가 전체 질문 수보다 크면 모든 질문 사용
+  const actualCount = Math.min(count, allQuestions.length);
+  return shuffled.slice(0, actualCount);
 };
 
 export const useQuestions = () => {
