@@ -1,21 +1,31 @@
 .question-card {
   background: white;
-  border-radius: 20px;
+  border-radius: 25px;
   padding: 40px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  border: 5px solid #ff6b9d;
+  box-shadow: 
+    10px 10px 0 #ffd700,
+    15px 15px 0 #87ceeb,
+    20px 20px 30px rgba(0, 0, 0, 0.2);
   max-width: 600px;
   width: 100%;
   animation: slideIn 0.5s ease-out;
+  transform: rotate(-1deg);
+  transition: all 0.3s ease;
+}
+
+.question-card:hover {
+  transform: rotate(0deg) scale(1.02);
 }
 
 @keyframes slideIn {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(20px) rotate(-5deg);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) rotate(-1deg);
   }
 }
 
@@ -28,33 +38,46 @@
 
 .question-emoji {
   font-size: 48px;
-  animation: bounce 2s ease-in-out infinite;
+  animation: bounce-spin 2s ease-in-out infinite;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
 }
 
-@keyframes bounce {
+@keyframes bounce-spin {
   0%, 100% {
-    transform: translateY(0);
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translateY(-10px) rotate(-10deg) scale(1.1);
   }
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-15px) rotate(10deg) scale(1.15);
+  }
+  75% {
+    transform: translateY(-10px) rotate(-5deg) scale(1.1);
   }
 }
 
 .question-number {
   font-size: 18px;
-  font-weight: 600;
-  color: #666;
-  background: #f0f0f0;
-  padding: 8px 16px;
-  border-radius: 20px;
+  font-weight: 800;
+  color: white;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: 3px solid white;
+  box-shadow: 3px 3px 0 #ffd700;
 }
 
 .question-text {
-  font-size: 24px;
-  font-weight: 700;
-  color: #333;
+  font-size: 26px;
+  font-weight: 800;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   margin-bottom: 30px;
   line-height: 1.4;
+  filter: drop-shadow(0 2px 4px rgba(102, 126, 234, 0.2));
 }
 
 .options-container {
@@ -66,36 +89,39 @@
 .option-button {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
-  border: none;
-  border-radius: 15px;
+  border: 4px solid white;
+  border-radius: 20px;
   padding: 20px;
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
   transition: all 0.3s ease;
   text-align: left;
   position: relative;
   overflow: hidden;
+  box-shadow: 5px 5px 0 #ffd700;
+  transform: rotate(0deg);
 }
 
 .option-button::before {
-  content: '';
+  content: '✨';
   position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.2);
-  transition: left 0.5s ease;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%) scale(0);
+  font-size: 24px;
+  transition: all 0.3s ease;
 }
 
 .option-button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+  transform: translateY(-5px) rotate(-1deg);
+  box-shadow: 
+    7px 7px 0 #ffd700,
+    10px 10px 20px rgba(102, 126, 234, 0.4);
 }
 
 .option-button:hover::before {
-  left: 100%;
+  transform: translateY(-50%) scale(1) rotate(360deg);
 }
 
 .option-button:active {
